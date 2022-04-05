@@ -38,7 +38,7 @@ module.exports = {
       __key: 'content',
     },
     {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: 'gatsby-plugin-page-creator',
       options: {
         path: `${__dirname}/src/content`,
       },
@@ -50,5 +50,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    'gatsby-plugin-postcss',
   ],
 };
