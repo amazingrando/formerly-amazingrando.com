@@ -37,6 +37,18 @@ module.exports = {
       },
       __key: 'content',
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
