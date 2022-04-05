@@ -1,22 +1,23 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import * as React from 'react';
+import PropTypes from 'prop-types'; // ES6
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const BlogPost = ({data}) => {
-  return (
-    <div pageTitle="Super Cool Blog Posts">
-      <h1>{data.mdx.frontmatter.title}</h1>
-      <p>{data.mdx.frontmatter.date}</p>
-      <MDXRenderer>
-        {data.mdx.body}
-      </MDXRenderer>
-    </div>
-  )
-}
+const BlogPost = ({ data }) => (
+  <div>
+    <h1>{data.mdx.frontmatter.title}</h1>
+    <p>{data.mdx.frontmatter.date}</p>
+    <MDXRenderer>{data.mdx.body}</MDXRenderer>
+  </div>
+);
+
+BlogPost.propTypes = {
+  data: PropTypes.node,
+};
 
 export const query = graphql`
   query ($id: String) {
-    mdx(id: {eq: $id}) {
+    mdx(id: { eq: $id }) {
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
@@ -24,6 +25,6 @@ export const query = graphql`
       body
     }
   }
-`
+`;
 
-export default BlogPost
+export default BlogPost;
