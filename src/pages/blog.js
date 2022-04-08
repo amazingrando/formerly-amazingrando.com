@@ -1,26 +1,27 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import * as React from 'react';
+import PropTypes from 'prop-types'; // ES6
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const BlogPage = ({ data }) => {
-  return (
-    <div>
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
-          <p>Posted: {node.frontmatter.date}</p>
-          <MDXRenderer>
-              {node.body}
-            </MDXRenderer>
-        </article>
-      ))}
-    </div>
-  )
-}
+const BlogPage = ({ data }) => (
+  <div>
+    {data.allMdx.nodes.map((node) => (
+      <article key={node.id}>
+        <h2>{node.frontmatter.title}</h2>
+        <p>Posted: {node.frontmatter.date}</p>
+        <MDXRenderer>{node.body}</MDXRenderer>
+      </article>
+    ))}
+  </div>
+);
+
+BlogPage.propTypes = {
+  data: PropTypes.node,
+};
 
 export const query = graphql`
   query {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
@@ -31,6 +32,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPage
+export default BlogPage;

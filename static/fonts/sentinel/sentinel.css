@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-Bold.woff2") format("woff2"),
+    url("./Sentinel-Bold.woff") format("woff"),
+    url("./Sentinel-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-Medium.woff2") format("woff2"),
+    url("./Sentinel-Medium.woff") format("woff"),
+    url("./Sentinel-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-MediumItalic.woff2")
+      format("woff2"),
+    url("./Sentinel-MediumItalic.woff") format("woff"),
+    url("./Sentinel-MediumItalic.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel Book";
+  src: url("./Sentinel-BookItalic.woff2")
+      format("woff2"),
+    url("./Sentinel-BookItalic.woff") format("woff"),
+    url("./Sentinel-BookItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-Light.woff2") format("woff2"),
+    url("./Sentinel-Light.woff") format("woff"),
+    url("./Sentinel-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-Black.woff2") format("woff2"),
+    url("./Sentinel-Black.woff") format("woff"),
+    url("./Sentinel-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-Semibold.woff2")
+      format("woff2"),
+    url("./Sentinel-Semibold.woff") format("woff"),
+    url("./Sentinel-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("./Sentinel-LightItalic.woff2")
+      format("woff2"),
+    url("./Sentinel-LightItalic.woff") format("woff"),
+    url("./Sentinel-LightItalic.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}

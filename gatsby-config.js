@@ -57,6 +57,10 @@ module.exports = {
         typekit: {
           id: process.env.TYPEKIT_ID,
         },
+        custom: {
+          families: ['Sentinel'],
+          urls: ['/fonts/sentinel/sentinel.css'],
+        },
       },
     },
   ],

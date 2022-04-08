@@ -1,17 +1,20 @@
 import * as React from 'react';
-import '@fontsource/league-spartan/700.css';
+import tw, { styled, css } from 'twin.macro';
+import '@fontsource/inter';
+
+const PageTitle = styled.h1`
+  ${tw`text-5xl font-medium font-serif mb-8`}
+`;
+
+const Text = styled.p`
+  ${tw`text-lg font-normal font-sans mb-4 w-1/2`}
+`;
 
 // styles
 const pageStyles = {
   color: '#232129',
   padding: 96,
-  fontFamily: 'brandon-grotesque, -apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-  fontSize: '4rem',
+  fontFamily: 'sculpin, -apple-system, Roboto, sans-serif, serif',
 };
 const headingAccentStyles = {
   color: '#663399',
@@ -129,16 +132,38 @@ const links = [
 
 // markup
 const IndexPage = () => (
-  <main style={pageStyles}>
+  <main style={pageStyles} className="prose">
     <title>Home Page</title>
-    <h1 style={headingStyles}>
-      Congratulations
-      <br />
-      <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-      <span role="img" aria-label="Party popper emojis">
-        🎉🎉🎉
-      </span>
-    </h1>
+    <PageTitle>
+      Getting Permission to Enter a Foreign Land, <br />
+      Run as a Long Conflict (Fate RPG)
+    </PageTitle>
+    <Text>
+      I’m running a Musketeer-style game and the PCs are trying to sail into the
+      port of a foreign country that has closed their borders. They would like
+      to do this legally for story reasons (but are fine with sneaking in if
+      they have to).
+    </Text>
+
+    <Text>
+      This is usually the perfect place for an Overcome roll or even a
+      Challenge. But one of my favorite things about Fate is the Bronze Rule,
+      where you can treat anything like a character.
+    </Text>
+
+    <Text>So I turned the scene into a Conflict.</Text>
+
+    <Text>
+      The stakes for the conflict were that if the PCs won they could enter the
+      country legally and if they lost, they’d have to either sneak in or halt
+      the mission.
+    </Text>
+
+    <Text>
+      Using the Bronze Rule, the opponents were Docking Administrators,
+      Government Officials, and the Country’s Insular Culture.
+    </Text>
+
     <p style={paragraphStyles}>
       Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
       update in real-time.{' '}
